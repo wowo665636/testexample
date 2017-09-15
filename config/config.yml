@@ -1,0 +1,7 @@
+URL: http://61.183.119.93:8090/plat-o2o-station/Station/#/login
+log:
+    file_name: test.log
+    backup: 5
+    console_level: WARNING
+    file_level: DEBUG
+    pattern: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
