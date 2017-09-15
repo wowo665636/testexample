@@ -1,5 +1,6 @@
 import unittest
 from time import sleep
+from utils.log import logger
 from selenium import webdriver
 from test.page.loginPage import login_h5
 from utils.config import Config, DRIVER_PATH, DATA_PATH, REPORT_PATH
@@ -18,7 +19,9 @@ class LoginH5Tests(unittest.TestCase):
     def test0(self):
         self.sub_setUp()
         self.page.user_login()
-        sleep(12)
+        sleep(2)
+        link = self.page.login_seccess
+        logger.info(link.text)
         self.sub_tearDown()
 
 

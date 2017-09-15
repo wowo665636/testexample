@@ -7,6 +7,10 @@ class login_h5(Page):
     login_username_loc = (By.ID, 'user_name')
     login_password_loc = (By.ID, 'user_password')
     login_btn_loc = (By.ID, 'login_btn')
+    login_seccess_log = (By.CLASS_NAME, 'ng-binding')
+
+    user_result_log = (By.XPATH, 'html/body/div[1]/section/ul/li[1]/p')
+    pwd_result_log = (By.XPATH, 'html/body/div[1]/section/ul/li[2]/p')
 
     def login_username(self, username):
         self.find_element(*self.login_username_loc).send_keys(username)
@@ -25,3 +29,12 @@ class login_h5(Page):
         self.login_password(password)
         self.login_button()
         sleep(1)
+
+    def user_result(self):
+        return self.find_element(*self.user_result_log)
+
+    def pwd_result(self):
+        return self.find_element(*self.pwd_result_log)
+
+    def login_seccess(self):
+        return self.find_element(*self.login_seccess_log)
