@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65e05271-80d4-485f-bdc9-12ad807e551b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/common/myunit.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/station_case/login_sta1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.yml" afterPath="$PROJECT_DIR$/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/test.log" afterPath="$PROJECT_DIR$/log/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/common/browser.py" afterPath="$PROJECT_DIR$/test/common/browser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/common/page.py" afterPath="$PROJECT_DIR$/test/common/page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/page/loginPage.py" afterPath="$PROJECT_DIR$/test/page/loginPage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/station_case/login_sta.py" afterPath="$PROJECT_DIR$/test/station_case/login_sta.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -297,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505469953815</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加">
+      <created>1505815355601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505815355601</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
