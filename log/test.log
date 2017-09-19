@@ -1,3 +1,8 @@
-2017-08-28 09:55:15,973 - framework - DEBUG - GET http://wthrcdn.etouch.cn/weather_mini?citykey=101010100
-2017-08-28 09:55:15,974 - framework - DEBUG - 请求成功: <Response [200]>
-{"data":{"yesterday":{"date":"27日星期日","high":"高温 18℃","fx":"东风","low":"低温 17℃","fl":"<![CDATA[<3级]]>","type":"阵雨"},"city":"北京","aqi":"45","forecast":[{"date":"28日星期一","high":"高温 28℃","fengli":"<![CDATA[<3级]]>","low":"低温 17℃","fengxiang":"东北风","type":"多云"},{"date":"29日星期二","high":"高温 25℃","fengli":"<![CDATA[<3级]]>","low":"低温 16℃","fengxiang":"西南风","type":"多云"},{"date":"30日星期三","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 18℃","fengxiang":"西南风","type":"多云"},{"date":"31日星期四","high":"高温 27℃","fengli":"<![CDATA[<3级]]>","low":"低温 18℃","fengxiang":"北风","type":"多云"},{"date":"1日星期五","high":"高温 26℃","fengli":"<![CDATA[<3级]]>","low":"低温 19℃","fengxiang":"西南风","type":"阴"}],"ganmao":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","wendu":"20"},"status":1000,"desc":"OK"}
+2017-09-19 16:32:08,177 - framework - INFO - 站主，您好！
+2017-09-19 16:34:16,561 - framework - INFO - 站主，您好！
+2017-09-19 16:34:40,437 - framework - INFO - 请输入用户名
+2017-09-19 16:38:01,879 - framework - INFO - 站主，您好！
+2017-09-19 16:38:17,440 - framework - INFO - 请输入用户名
+2017-09-19 16:40:27,464 - framework - INFO - 请输入用户名
+2017-09-19 17:03:55,426 - framework - INFO - 站主，您好！
+2017-09-19 17:04:17,229 - framework - INFO - 请输入用户名

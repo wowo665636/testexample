@@ -6,6 +6,10 @@ from utils.log import logger
 
 class Page(Browser):
     def __init__(self, page=None, browser_type='firefox'):
+        """
+
+        :rtype: object
+        """
         if page:
             self.driver = page.driver
         else:

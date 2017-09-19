@@ -7,9 +7,10 @@ from utils.config import DRIVER_PATH, REPORT_PATH
 CHROMEDRIVER_PATH = DRIVER_PATH + '\chromedriver.exe'
 IEDRIVER_PATH = DRIVER_PATH + '\IEDriverServer.exe'
 PHANTOMJSDRIVER_PATH = DRIVER_PATH + '\phantomjs.exe'
+FIREFOXDRIVER_PATH = DRIVER_PATH + '\geckodriver.exe'
 
 TYPES = {'firefox': webdriver.Firefox, 'chrome': webdriver.Chrome, 'ie': webdriver.Ie, 'phantomjs': webdriver.PhantomJS}
-EXECUTABLE_PATH = {'firefox': 'wires', 'chrome': CHROMEDRIVER_PATH, 'ie': IEDRIVER_PATH, 'phantomjs': PHANTOMJSDRIVER_PATH}
+EXECUTABLE_PATH = {'firefox': FIREFOXDRIVER_PATH, 'chrome': CHROMEDRIVER_PATH, 'ie': IEDRIVER_PATH, 'phantomjs': PHANTOMJSDRIVER_PATH}
 
 
 class UnSupportBrowserTypeError(Exception):
@@ -28,6 +29,7 @@ class Browser(object):
     def get(self, url, maximize_window=True, implicitly_wait=30):
         self.driver = self.browser(executable_path=EXECUTABLE_PATH[self._type])
         self.driver.get(url)
+        # self.driver.set_window_size(600, 800)    # 设置浏览器窗口大小,不是所有项目使用所以弃用
         if maximize_window:
             self.driver.maximize_window()
         self.driver.implicitly_wait(implicitly_wait)

@@ -1,4 +1,9 @@
 URL: http://61.183.119.93:8090/plat-o2o-station/Station/#/login
+browser_type: chrome
+stationname: 42010003
+stationpwd: qqqqqq
+
+
 log:
     file_name: test.log
     backup: 5
