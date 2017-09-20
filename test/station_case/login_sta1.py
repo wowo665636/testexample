@@ -1,3 +1,4 @@
+# coding=utf-8
 import unittest
 from time import sleep
 from utils.log import logger
@@ -20,16 +21,15 @@ class LoginH5Tests(myunit.MyTest):
         self.assertEqual(link, "站主，您好！")
         po.save_screen_shot(name='login_seccess')  # 截图
         logger.info(link)
-    """
+
     def test1(self):
-        '''用户名为空'''
-        po = login_h5()
+        """用户名为空"""
+        po = login_h5(self.driver)
         po.user_login(username="", password=self.PWD)
         link = po.user_result()
         po.save_screen_shot(name='username_error')  # 截图
         logger.info(link.text)
         self.sub_tearDown()
-    """
 
 
 if __name__ == '__main__':
