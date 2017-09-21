@@ -14,7 +14,9 @@ class LoginH5Tests(myunit.MyTest):
 
     def test0(self):
         """正确登录"""
-        po = login_h5(self.driver)
+        driver = myunit.MyTest.sub_setUp(self)
+        po = login_h5(driver)
+        # po = login_h5(sub_setUp(self))
         po.user_login(username=self.USER, password=self.PWD)
         link = po.login_seccess().text
         self.assertEqual(link, "站主，您好！")
