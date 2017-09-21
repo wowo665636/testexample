@@ -1,22 +1,19 @@
 # coding=utf-8
-import unittest
-from time import sleep
 from utils.log import logger
-from selenium import webdriver
-from test.page.loginPage import login_h5
 from test.common import myunit
+from test.page.loginPage import login_h5
+from utils.HTMLTestRunner import HTMLTestRunner
 from utils.config import Config, DRIVER_PATH, DATA_PATH, REPORT_PATH
 
 
 class LoginH5Tests(myunit.MyTest):
-    URL = Config().get('URL')
+    URL = Config().get('HuBURL')
     USER = Config().get('stationname')
     PWD = Config().get('stationpwd')
 
     def test0(self):
         """正确登录"""
-        driver = myunit.MyTest.sub_setUp(self)
-        po = login_h5(driver)
+        po = login_h5(self.driver)
         # po = login_h5(sub_setUp(self))
         po.user_login(username=self.USER, password=self.PWD)
         link = po.login_seccess().text
@@ -31,8 +28,10 @@ class LoginH5Tests(myunit.MyTest):
         link = po.user_result()
         po.save_screen_shot(name='username_error')  # 截图
         logger.info(link.text)
-        self.sub_tearDown()
 
 
 if __name__ == '__main__':
-    unittest.main()
+    report = REPORT_PATH + '\\report.html'
+    with open(report, 'wb') as f:
+        runner = HTMLTestRunner(f, verbosity=2, title='湖北站主H5测试报告', description='修改html报告')
+        runner.run(LoginH5Tests('test0'))

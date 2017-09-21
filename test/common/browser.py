@@ -5,7 +5,7 @@ from selenium import webdriver
 from utils.config import DRIVER_PATH, REPORT_PATH
 
 # 可根据需要自行扩展
-CHROMEDRIVER_PATH = DRIVER_PATH + '/chromedriver'
+CHROMEDRIVER_PATH = DRIVER_PATH + '/chromedriver.exe'
 IEDRIVER_PATH = DRIVER_PATH + '/IEDriverServer.exe'
 PHANTOMJSDRIVER_PATH = DRIVER_PATH + '/hantomjs.exe'
 FIREFOXDRIVER_PATH = DRIVER_PATH + '/geckodriver.exe'
@@ -29,7 +29,6 @@ class Browser(object):
 
     def get(self, url, maximize_window=True, implicitly_wait=30):
         self.driver = self.browser(executable_path=EXECUTABLE_PATH[self._type])
-        print (url)
         self.driver.get(url)
         # self.driver.set_window_size(600, 800)    # 设置浏览器窗口大小,不是所有项目使用所以弃用
         if maximize_window:

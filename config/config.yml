@@ -1,5 +1,19 @@
-URL: http://61.183.119.93:8090/plat-o2o-station/Station/#/login
 browser_type: chrome
+# 安卓配置
+platformVersion:
+deviceName:
+appPackage: com.palm.hno2o
+appActivity: com.palm.hno2o.ui.NewMainActivity
+
+# 河南环境配置
+hnappPackage: com.palm.hno2o
+hnappActivity: com.palm.hno2o.ui.NewMainActivity
+
+hnusername: 18310094090
+hnpassword: qqqqqq
+
+# 湖北环境配置
+HuBURL: http://61.183.119.93:8090/plat-o2o-station/Station/#/login
 stationname: 42010003
 stationpwd: qqqqqq
 
