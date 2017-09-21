@@ -7,8 +7,8 @@ class MyTest(unittest.TestCase):
     browser_type = Config().get('browser_type')
     URL = Config().get('URL')
 
-    def sub_setUp(self):
+    def setUp(self):
         self.driver = Browser(browser_type=self.browser_type).get(self.URL, maximize_window=True)
 
-    def sub_tearDown(self):
+    def tearDown(self):
         self.driver.quit()
