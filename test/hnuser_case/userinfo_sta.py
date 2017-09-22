@@ -1,10 +1,8 @@
-import unittest
-from utils.config import Config
-from test.page.sidebarPage import sidebar
 from test.common import androidmyunit
 from test.common.browser import Browser
+from test.hnuser_page.sidebarPage import sidebar
 from utils.HTMLTestRunner import HTMLTestRunner
-from utils.config import Config, DRIVER_PATH, DATA_PATH, REPORT_PATH
+from utils.config import Config, REPORT_PATH
 
 
 class userinfoTests(androidmyunit.MyTest):
@@ -20,6 +18,7 @@ class userinfoTests(androidmyunit.MyTest):
             sidebar(self.driver).userinfo(realname=self.realname, usercard=self.usercard)
             Browser.save_screen_shot(name='userinfo_seccess')    # 截图
         else:
+            Browser.save_screen_shot(name='userinfo_fail')  # 截图
             po.sidebar_btn()
             print(link)
 

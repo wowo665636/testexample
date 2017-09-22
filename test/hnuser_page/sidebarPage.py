@@ -17,7 +17,7 @@ class sidebar(Page):
     nav_myorder_loc = (By.ID, 'com.palm.hno2o:id/my_order')
 
     # 个人资料
-    def nav_userinfo(self, username):
+    def nav_userinfo(self):
         self.find_element(*self.nav_userinfo_loc).click()
 
     userinfo_loc = (By.ID, 'com.palm.hno2o:id/user_info_tv')
@@ -33,4 +33,8 @@ class sidebar(Page):
         self.find_elements(*self.realname_loc).sendkeys(realname)
         self.find_elements(*self.usercard_loc).sendkeys(usercard)
         self.find_elements(*self.submit_loc).click()
+
+    # 密码修改
+    def nav_userpwd(self):
+        self.find_element(*self.nav_userpwd_loc).click()
 

@@ -1,7 +1,8 @@
 import unittest
-from utils.config import Config
-from test.page.loginAnPage import Login
+
 from test.common import androidmyunit
+from test.hnuser_page.loginAnPage import Login
+from utils.config import Config
 
 
 class ContactsAndroidTests(androidmyunit.MyTest):

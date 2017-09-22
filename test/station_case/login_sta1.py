@@ -1,9 +1,9 @@
 # coding=utf-8
-from utils.log import logger
 from test.common import myunit
-from test.page.loginPage import login_h5
+from test.stationhub_page.loginPage import login_h5
 from utils.HTMLTestRunner import HTMLTestRunner
-from utils.config import Config, DRIVER_PATH, DATA_PATH, REPORT_PATH
+from utils.config import Config, REPORT_PATH
+from utils.log import logger
 
 
 class LoginH5Tests(myunit.MyTest):
