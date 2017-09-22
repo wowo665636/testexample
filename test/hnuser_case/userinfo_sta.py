@@ -1,3 +1,4 @@
+import time
 from test.common import androidmyunit
 from test.common.browser import Browser
 from test.hnuser_page.sidebarPage import sidebar
@@ -24,7 +25,8 @@ class userinfoTests(androidmyunit.MyTest):
 
 
 if __name__ == '__main__':
-    report = REPORT_PATH + '\\report.html'
+    now = time.strftime("%Y-%m-%d %H_%M_%S")
+    report = REPORT_PATH + '/' + now + 'report.html'
     with open(report, 'wb') as f:
-        runner = HTMLTestRunner(f, verbosity=2, title='湖北站主H5测试报告', description='修改html报告')
-        runner.run(userinfoTests('test_login'))
+        runner = HTMLTestRunner(f, verbosity=2, title='湖北站主H5测试报告', description='用例执行情况：')
+        runner.run(userinfoTests('test0'))

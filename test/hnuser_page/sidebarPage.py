@@ -38,3 +38,13 @@ class sidebar(Page):
     def nav_userpwd(self):
         self.find_element(*self.nav_userpwd_loc).click()
 
+    now_pwd_loc = (By.ID, 'com.palm.hno2o:id/now_pwd_et')
+    new_pwd1_loc = (By.ID, 'com.palm.hno2o:id/pwd1_et')
+    new_pwd2_loc = (By.ID, 'com.palm.hno2o:id/pwd2_et')
+
+    def modifypwd(self, nowpwd, newpwd):
+        self.find_element(*self.now_pwd_loc).sendkeys(nowpwd)
+        self.find_element(*self.new_pwd1_loc).sendkeys(newpwd)
+        self.find_element(*self.new_pwd2_loc).sendkeys(newpwd)
+        self.find_elements(*self.submit_loc).click()
+
